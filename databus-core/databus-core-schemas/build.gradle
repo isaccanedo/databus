@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+test.workingDir = "${project.rootDir}"
+
+dependencies {
+  compile project(':databus-core:databus-core-impl')
+
+  compile externalDependency.avro
+  compile externalDependency.jacksonCoreAsl
+  compile externalDependency.jacksonMapperAsl
+  compile externalDependency.log4j
+  compile externalDependency.commonsIo
+
+  testCompile externalDependency.testng
+  testCompile externalDependency.zkclientHelix 
+}
+
+test {
+	useTestNG()
+	options.suites(file('testng.xml'))
+}

@@ -1,0 +1,31 @@
+apply plugin: 'java'
+
+test.workingDir = "${project.rootDir}"
+
+dependencies {
+  compile externalDependency.avro
+  compile externalDependency.commonsBeanutils
+  compile externalDependency.commonsCli
+  compile externalDependency.commonsCodec
+  compile externalDependency.commonsCollections
+  compile externalDependency.commonsIo
+  compile externalDependency.commonsLang
+  compile externalDependency.commonsLogging
+  compile externalDependency.jacksonCoreAsl
+  compile externalDependency.jacksonMapperAsl
+  compile externalDependency.json
+  compile externalDependency.log4j
+  compile externalDependency.netty
+  compile externalDependency.c3p0
+  compile externalDependency.guava
+
+  testCompile externalDependency.testng
+  testCompile externalDependency.easymock
+  testCompile project(':databus-core:databus-core-fwk-test')
+}
+
+test {
+  useTestNG()
+  ext.testDataDirName = projectDir.absolutePath + "/test_data"
+  systemProperties.put('test.datadir', "${ext.testDataDirName}")
+}

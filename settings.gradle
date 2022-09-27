@@ -1,0 +1,42 @@
+// If a new directory is added, that contains a test inside, please add the directory here
+def base_modules = [
+'databus-bootstrap-client',
+'databus-bootstrap-common',
+'databus-bootstrap-producer',
+'databus-bootstrap-server',
+'databus-bootstrap-utils',
+'databus-client',
+'databus-core',
+'databus-cluster',
+'databus-group-leader',
+'databus-relay',
+'databus-tools',
+'databus-util-cmdline',
+'databus2-example',
+'databus2-relay',
+'db',
+'script',
+'metrics-histograms'
+]
+
+// add above to get hadoop artifacts uploaded 'hadoop',
+
+//TODO modules removed due to problems with their build dependencies:
+//
+// these are being worked on
+
+def nonReleaseModules = [
+]
+
+//consuming of root.dir property allows us to 'wrap' the open source project with a master gradle project if necessary
+String rootDir = hasProperty("root.dir") ? getProperty("root.dir") : settingsDir
+
+base_modules.each { module ->
+  file("$rootDir/$module").eachDir { submodule ->
+    if (!submodule.name.startsWith('.') && !nonReleaseModules.contains(submodule.name)) {
+      def path = ":${module}:${submodule.name}"
+      include path
+      project(path).projectDir = file("$rootDir/$module/$submodule.name")
+    }
+  }
+}

@@ -1,0 +1,31 @@
+repositories {
+  // for open source we cannot user internal repo
+  // so we add few open source ones
+  mavenCentral()
+  maven {
+	url "https://repo.fusesource.com/maven2"
+  }
+  maven {
+	url "https://maven.restlet.org"
+  }
+
+  // local repo for libs we have to ship with     
+  def sandBoxRepo = "${project.rootDir}/sandbox-repo"
+  def sandBoxExists = new File(sandBoxRepo).isDirectory()
+  if (sandBoxExists) {
+    logger.debug "Adding repository $sandBoxRepo"
+	project.repositories.ivy {
+	  name "sanboxRepo"
+      url sandBoxRepo
+      layout "pattern", {
+        artifact "[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"
+        ivy "[organisation]/[module]/[revision]/[module]-[revision].ivy"
+        m2compatible = true
+      }
+    }
+  } else {
+    logger.debug "Not adding repository $sandBoxRepo as the directory does not exist."
+  }
+}
+
+project.buildDir = new File(project.rootProject.buildDir, project.name)

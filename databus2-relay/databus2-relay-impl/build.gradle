@@ -1,0 +1,39 @@
+apply plugin: 'java'
+
+dependencies {
+  compile project(':databus-core:databus-core-container')
+  compile project(':databus-core:databus-core-impl')
+  compile project(':databus-core:databus-core-schemas')
+  compile project(':databus-client:databus-client-api')
+  compile project(':databus-client:databus-client-common')
+  compile project(':databus-client:databus-client-http')
+  compile project(':databus2-relay:databus2-event-producer-common')
+  compile project(':databus2-relay:databus2-event-producer-mock')
+  compile project(':databus2-relay:databus2-event-producer-or')
+//  compile project(':databus-util-cmdline:databus-util-cmdline-impl')
+
+  compile externalDependency.avro
+  compile externalDependency.commonsBeanutils
+  compile externalDependency.commonsCli
+  compile externalDependency.commonsIo
+  compile externalDependency.commonsLogging
+  compile externalDependency.jacksonCoreAsl
+  compile externalDependency.jacksonMapperAsl
+  compile externalDependency.log4j
+  compile externalDependency.netty
+  compile externalDependency.json
+
+  runtime externalDependency.ojdbc6
+
+  testCompile project(':databus-core:databus-core-fwk-test')
+  testCompile project(':databus-core:databus-core-impl')
+  testCompile externalDependency.testng
+  testCompile externalDependency.easymock
+}
+
+test {
+  ext.ggTestDataDirName = projectDir.absolutePath + "/src/test/TestData"
+  systemProperties.put('test.ggTestDataDir', "${ext.ggTestDataDirName}")
+}
+test.useTestNG()
+test.workingDir = "${project.rootDir}"
