@@ -5,7 +5,7 @@
 
 Nas arquiteturas da Internet, os sistemas de dados são normalmente categorizados em sistemas de fonte da verdade que servem como armazenamentos primários para as gravações geradas pelo usuário e armazenamentos de dados derivados ou índices que servem para leituras e outras consultas complexas. Os dados nesses armazenamentos secundários geralmente são derivados dos dados primários por meio de transformações personalizadas, às vezes envolvendo processamento complexo orientado pela lógica de negócios. Da mesma forma, os dados nas camadas de cache são derivados de leituras no armazenamento de dados primário, mas precisam ser invalidados ou atualizados quando os dados primários são modificados. Um requisito fundamental que emerge desses tipos de arquiteturas de dados é a necessidade de capturar, fluir e processar alterações de dados primários de forma confiável.
 
-We have built Databus, a source-agnostic distributed change data capture system, which is an integral part of LinkedIn's data processing pipeline. The Databus transport layer provides latencies in the low milliseconds and handles throughput of thousands of events per second per server while supporting infinite look back capabilities and rich subscription functionality. 
+Construímos o Databus, um sistema de captura de dados de alteração distribuído independente de fonte, que é parte integrante do pipeline de processamento de dados do LinkedIn. A camada de transporte do Databus fornece latências em poucos milissegundos e lida com a taxa de transferência de milhares de eventos por segundo por servidor, ao mesmo tempo em que oferece suporte a recursos infinitos de retrospectiva e a uma rica funcionalidade de assinatura.
 
 # Use-cases
 *****
