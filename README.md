@@ -11,7 +11,7 @@ Construímos o Databus, um sistema de captura de dados de alteração distribuí
 *****
 Normalmente, os armazenamentos de dados OLTP primários recebem gravações e algumas leituras voltadas para o usuário, enquanto outros sistemas especializados atendem a consultas complexas ou aceleram os resultados da consulta por meio do armazenamento em cache. Os sistemas de dados mais comuns encontrados nessas arquiteturas incluem bancos de dados relacionais, armazenamentos de dados NoSQL, mecanismos de cache, índices de pesquisa e mecanismos de consulta de gráficos. Essa especialização, por sua vez, tornou essencial ter um pipeline de dados confiável e escalável que possa capturar essas mudanças que ocorrem nos sistemas primários de fonte da verdade e encaminhá-los para o restante do complexo ecossistema de dados. Existem duas famílias de soluções que normalmente são usadas para construir esse pipeline.
 
-### Application-driven Dual Writes:
+### Gravações duplas orientadas por aplicativos:
 In this model, the application layer writes to the database and in parallel, writes to another messaging system. This looks simple to implement since the application code writing to the database is under our control. However it introduces a consistency problem because without a complex co-ordination protocol (e.g. Paxos or 2-Phase Commit ) it is hard to ensure that both the database and the messaging system are in complete lock step with each other in the face of failures. Both systems need to process exactly the same writes and need to serialize them in exactly the same order. Things get even more complex if the writes are conditional or have partial update semantics.
 
 ### Database Log Mining: 
