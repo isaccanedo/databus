@@ -32,7 +32,7 @@ O Databus **NÃO** será construído sem esta etapa. Depois de baixar os jars, e
 
 # Construir sistema
 *****
-Databus currently needs gradle version 1.0 or above to build. The commands to build are :
+Atualmente, o Databus precisa da versão gradle 1.0 ou superior para compilar. Os comandos para construir são :
 * `gradle -Dopen_source=true assemble` -- builds the jars and command line package
 * `gradle -Dopen_source=true clean`    -- cleans the build directory
 * `gradle -Dopen_source=true test`     -- runs all the unit-tests that come packaged with the source
