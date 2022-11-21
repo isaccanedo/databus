@@ -7,7 +7,7 @@ Nas arquiteturas da Internet, os sistemas de dados são normalmente categorizado
 
 Construímos o Databus, um sistema de captura de dados de alteração distribuído independente de fonte, que é parte integrante do pipeline de processamento de dados do LinkedIn. A camada de transporte do Databus fornece latências em poucos milissegundos e lida com a taxa de transferência de milhares de eventos por segundo por servidor, ao mesmo tempo em que oferece suporte a recursos infinitos de retrospectiva e a uma rica funcionalidade de assinatura.
 
-# Use-cases
+# Casos de uso
 *****
 Typically, Primary OLTP data-stores take user facing writes and some reads, while other specialized systems serve complex queries or accelerate query results through caching. The most common data systems found in these architectures include relational databases, NoSQL data stores, caching engines, search indexes and graph query engines. This specialization has in turn made it critical to have a reliable and scalable data pipeline that can capture these changes happening for primary source-of-truth systems and route them through the rest of the 
 complex data eco-system. There are two families of solutions that are typically used for building such a pipeline.
