@@ -30,7 +30,7 @@ O Databus **NÃO** será construído sem esta etapa. Depois de baixar os jars, e
 * sandbox-repo/com/oracle/ojdbc6/11.2.0.2.0/ojdbc6-11.2.0.2.0.jar
 * sandbox-repo/com/oracle/ojdbc6/11.2.0.2.0/ojdbc6-11.2.0.2.0.ivy
 
-# Build System
+# Construir sistema
 *****
 Databus currently needs gradle version 1.0 or above to build. The commands to build are :
 * `gradle -Dopen_source=true assemble` -- builds the jars and command line package
