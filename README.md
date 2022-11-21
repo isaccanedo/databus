@@ -9,7 +9,7 @@ Construímos o Databus, um sistema de captura de dados de alteração distribuí
 
 # Casos de uso
 *****
-Normalmente, os armazenamentos de dados OLTP primários recebem gravações e algumas leituras voltadas para o usuário, enquanto outros sistemas especializados atendem a consultas complexas ou aceleram os resultados da consulta por meio do armazenamento em cache. The most common data systems found in these architectures include relational databases, NoSQL data stores, caching engines, search indexes and graph query engines. This specialization has in turn made it critical to have a reliable and scalable data pipeline that can capture these changes happening for primary source-of-truth systems and route them through the rest of the 
+Normalmente, os armazenamentos de dados OLTP primários recebem gravações e algumas leituras voltadas para o usuário, enquanto outros sistemas especializados atendem a consultas complexas ou aceleram os resultados da consulta por meio do armazenamento em cache. Os sistemas de dados mais comuns encontrados nessas arquiteturas incluem bancos de dados relacionais, armazenamentos de dados NoSQL, mecanismos de cache, índices de pesquisa e mecanismos de consulta de gráficos. This specialization has in turn made it critical to have a reliable and scalable data pipeline that can capture these changes happening for primary source-of-truth systems and route them through the rest of the 
 complex data eco-system. There are two families of solutions that are typically used for building such a pipeline.
 
 ### Application-driven Dual Writes:
