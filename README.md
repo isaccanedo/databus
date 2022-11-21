@@ -20,7 +20,7 @@ representações estáveis em disco ou on-the-wire em atualizações de versão.
 
 Depois de avaliar os prós e os contras das duas abordagens, decidimos buscar a opção de mineração de log, priorizando consistência e "fonte única de verdade" sobre a facilidade de implementação. Neste artigo, apresentamos o Databus, pipeline de Change Data Capture no LinkedIn, que suporta fontes Oracle e uma ampla gama de aplicativos downstream. O Social Graph Index, que atende a todas as consultas gráficas no LinkedIn, o People Search Index, que alimenta todas as pesquisas de membros no LinkedIn e as várias réplicas de leitura dos dados do perfil do membro, são todos alimentados e mantidos consistentes via Databus.
 
-More details about the architecture, usecases and performance evaluation can be obtained from a paper that got accepted for publication at the ACM Symposium on Cloud Computing - 2012. The slides for the presentation are available [here](http://www.slideshare.net/ShirshankaDas/databus-socc-2012)
+Mais detalhes sobre a arquitetura, casos de uso e avaliação de desempenho podem ser obtidos em um artigo aceito para publicação no ACM Symposium on Cloud Computing - 2012. Os slides da apresentação estão disponíveis [aqui](http://www.slideshare. net/ShirshankaDas/databus-socc-2012)
 
 # How to build ?
 *****
