@@ -14,7 +14,7 @@ Normalmente, os armazenamentos de dados OLTP primários recebem gravações e al
 ### Gravações duplas orientadas por aplicativos:
 Nesse modelo, a camada de aplicativo grava no banco de dados e, paralelamente, grava em outro sistema de mensagens. Isso parece simples de implementar, pois a gravação do código do aplicativo no banco de dados está sob nosso controle. No entanto, introduz um problema de consistência porque sem um protocolo de coordenação complexo (por exemplo, Paxos ou 2-Phase Commit ), é difícil garantir que o banco de dados e o sistema de mensagens estejam em total bloqueio entre si em caso de falhas. Ambos os sistemas precisam processar exatamente as mesmas gravações e serializá-las exatamente na mesma ordem. As coisas ficam ainda mais complexas se as gravações forem condicionais ou tiverem semântica de atualização parcial.
 
-### Database Log Mining: 
+### Mineração de logs de banco de dados: 
 In this model, we make the database the single source-of-truth and extract changes from its transaction or commit log. This solves our consistency issue, but is practically hard to implement
 because databases like Oracle and MySQL (the primary data stores in use at LinkedIn) have transaction log formats and replication solutions that are proprietary and not guaranteed to have 
 stable on-disk or on-the-wire representations across version upgrades.  Since we want to process the data changes with application code and then write to secondary data stores,
