@@ -43,8 +43,7 @@ O Databus será licenciado sob a licença Apache 2.0.
 
 # Documentação completa
 *****
-See our [wiki](https://github.com/linkedin/databus/wiki) for full documentation and examples.
-
+Veja nossa [wiki](https://github.com/linkedin/databus/wiki) para documentação completa e exemplos.
 # Example Relay
 *****
 An example of writing a DatabusRelay is available at PersonRelayServer.java. To be able to start a relay process, the code is packaged into a startable command-line package. The tarball may be obtained from build/databus2-example-relay-pkg/distributions/databus2-example-relay-pkg.tgz. This relay is configured to get changestreams for a view "Person".
