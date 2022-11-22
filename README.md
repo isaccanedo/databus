@@ -56,7 +56,7 @@ Se o relé for iniciado com sucesso, a saída do seguinte comando curl será sem
 * $ `curl http://localhost:11115/sources`
 * `[{“name”:“com.linkedin.events.example.person.Person”,“id”:40}]`
 
-# Example Client
+# Exemplo de Cliente
 *****
 An example of writing a DatabusClient is available at PersonClientMain.java. To easily be able to start the client process, the code is packaged into a startable command-line package. The tarball may be obtained from build/databus2-example-client-pkg/distributions/databus2-example-client-pkg.tgz. This client is configured to get data from the relay started previously, and configured to susbscribe for table Person.
 
