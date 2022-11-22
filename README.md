@@ -58,7 +58,7 @@ Se o relé for iniciado com sucesso, a saída do seguinte comando curl será sem
 
 # Exemplo de Cliente
 *****
-An example of writing a DatabusClient is available at PersonClientMain.java. To easily be able to start the client process, the code is packaged into a startable command-line package. The tarball may be obtained from build/databus2-example-client-pkg/distributions/databus2-example-client-pkg.tgz. This client is configured to get data from the relay started previously, and configured to susbscribe for table Person.
+Um exemplo de gravação de um DatabusClient está disponível em PersonClientMain.java. Para poder iniciar facilmente o processo do cliente, o código é empacotado em um pacote de linha de comando inicializável. O tarball pode ser obtido em build/databus2-example-client-pkg/distributions/databus2-example-client-pkg.tgz. Este cliente está configurado para obter dados do relé iniciado anteriormente e configurado para assinar a tabela Pessoa.
 
 After extracting to a directory, please cd to that directory and start the client using the following command :
 * `./bin/start-example-client.sh person`
