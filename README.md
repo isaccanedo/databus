@@ -49,7 +49,7 @@ Veja nossa [wiki](https://github.com/linkedin/databus/wiki) para documentação 
 *****
 Um exemplo de gravação de um DatabusRelay está disponível em PersonRelayServer.java. Para poder iniciar um processo de retransmissão, o código é empacotado em um pacote de linha de comando inicializável. O tarball pode ser obtido em build/databus2-example-relay-pkg/distributions/databus2-example-relay-pkg.tgz. This relay is configured to get changestreams for a view "Person".
 
-After extracting to a directory, please cd to that directory and start the relay using the following command :
+Depois de extrair para um diretório, faça o cd para esse diretório e inicie o relé usando o seguinte comando :
 * `./bin/start-example-relay.sh person`
 
 If the relay is started successfully, the output of the following curl command would look like :
