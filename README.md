@@ -41,7 +41,7 @@ Atualmente, o Databus precisa da versão gradle 1.0 ou superior para compilar. O
 *****
 O Databus será licenciado sob a licença Apache 2.0.
 
-# Full Documentation
+# Documentação completa
 *****
 See our [wiki](https://github.com/linkedin/databus/wiki) for full documentation and examples.
 
