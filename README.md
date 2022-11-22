@@ -37,7 +37,7 @@ Atualmente, o Databus precisa da versão gradle 1.0 ou superior para compilar. O
 * `gradle -Dopen_source=true clean`    -- cleans the build directory
 * `gradle -Dopen_source=true test`     -- runs all the unit-tests that come packaged with the source
 
-# Licensing
+# Licenciamento
 *****
 Databus will be licensed under Apache 2.0 license.
 
