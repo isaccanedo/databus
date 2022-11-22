@@ -52,7 +52,7 @@ Um exemplo de gravação de um DatabusRelay está disponível em PersonRelayServ
 Depois de extrair para um diretório, faça o cd para esse diretório e inicie o relé usando o seguinte comando :
 * `./bin/start-example-relay.sh person`
 
-If the relay is started successfully, the output of the following curl command would look like :
+Se o relé for iniciado com sucesso, a saída do seguinte comando curl será semelhante a :
 * $ `curl http://localhost:11115/sources`
 * `[{“name”:“com.linkedin.events.example.person.Person”,“id”:40}]`
 
