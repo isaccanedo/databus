@@ -63,6 +63,6 @@ Um exemplo de gravação de um DatabusClient está disponível em PersonClientMa
 Depois de extrair para um diretório, faça o cd para esse diretório e inicie o cliente usando o seguinte comando :
 * `./bin/start-example-client.sh person`
 
-If the client successfully connects to the relay we created earlier, the output of the following curl command would look like below ( indicating a client from localhost has connected to the relay ):
+Se o cliente se conectar com sucesso ao relé que criamos anteriormente, a saída do seguinte comando curl seria semelhante a abaixo (indicando que um cliente do localhost se conectou ao relé):
 * $`curl http://localhost:11115/relayStats/outbound/http/clients`
 * `["localhost"]`
