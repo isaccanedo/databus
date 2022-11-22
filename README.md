@@ -47,7 +47,7 @@ Veja nossa [wiki](https://github.com/linkedin/databus/wiki) para documentação 
 
 # Exemplo
 *****
-An example of writing a DatabusRelay is available at PersonRelayServer.java. To be able to start a relay process, the code is packaged into a startable command-line package. The tarball may be obtained from build/databus2-example-relay-pkg/distributions/databus2-example-relay-pkg.tgz. This relay is configured to get changestreams for a view "Person".
+Um exemplo de gravação de um DatabusRelay está disponível em PersonRelayServer.java. Para poder iniciar um processo de retransmissão, o código é empacotado em um pacote de linha de comando inicializável. O tarball pode ser obtido em build/databus2-example-relay-pkg/distributions/databus2-example-relay-pkg.tgz. This relay is configured to get changestreams for a view "Person".
 
 After extracting to a directory, please cd to that directory and start the relay using the following command :
 * `./bin/start-example-relay.sh person`
